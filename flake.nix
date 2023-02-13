@@ -7,7 +7,7 @@
     nixosConfigurations.hetzner-cloud = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = attrs;
-      environment.systemPackages = [ pkgs.hello ];
+      environment.systemPackages = [ nixpkgs.hello ];
       modules = [
         ({modulesPath, ... }: {
           imports = [
